@@ -107,12 +107,12 @@ updateStabilityMark(output.docMarkdown,
                     `${markBegin}\n${markdownTable}\n${markEnd}`,
                     new RegExp(mark, 's'));
 
-// add html table
+// add HTML table
 const html = createHTML(markdownTable);
 updateStabilityMark(output.docHTML, `${markBegin}${html}${markEnd}`,
                     new RegExp(mark, 's'));
 
-// add json output
+// add JSON output
 updateStabilityMark(output.docJSON,
                     JSON.stringify(`${markBegin}${html}${markEnd}`),
                     new RegExp(JSON.stringify(mark), 's'));
